@@ -14,7 +14,7 @@
 
 				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
 					<div class="panel panel-default">
-						<div class="panel-heading"><div class="panel-title"><h3>Stajyerliğimin ilk günü!</h3> </div></div>
+						<div class="panel-heading"><div class="panel-title"><h3>Stajyerliğimin ilk günüüüüü!</h3> </div></div>
 						<div class="panel-body">Hedeflerimi genellikle oldukça realist olmasına çalışıyorum. Şu an halimden mutluyum, keyifle çalışıyorum. Her sabah yataktan mutlu kalkıyorum. İşin yorgunluğunu eve gidene kadar hissetmiyorum. Şimdi çocuk gelişimi üzerine master yapmayı hedefliyorum.
 
 						* Kemal Sunal'ın kızı olarak yaptıklarıma, düşündüklerime ve yapacaklarıma dikkat ediyorum. Babam herkes tarafından örnek alınan ve gerçekten de örnek alınmayı hak eden bir insandı...
