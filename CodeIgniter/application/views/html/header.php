@@ -48,25 +48,11 @@
 			</form>
 			<!--Arama Kutusu END-->
 			
-                       
-                        
-                        
-			
 
 			<div class="collapse navbar-collapse navbarSec"><!--Sayfa küçültüldüğünde menü yü grup haline getiriyoruz-->
 				<ul class="nav navbar-nav navbar-right"><!--Menü başlıklarını oluşturduk-->
 					<li><a href="#" title="">Ben Kimim!</a></li>
-					<li><a href="#" title="">Duyurular</a></li>
 					<li><a href="#" title="">İletişim</a></li>
-					
-					<li class="dropdown"><!--Açılacak menünün içeriğini oluşturyoruz-->
-						<a href="#" title="" class="dropdown-toggle" data-toggle="dropdown">Açılır Menü <span class="caret"></span><!--Bu span da açılır menüye tıklanınca sağ tarafında açıldığına dair ok gösteriliyor.--></a><!--Menünün açılır menü şeklini almasını sağladık-->
-						<ul class="dropdown-menu navbar-inverse acilirmenu">
-							<li class="divider"></li><!--Menüye seperatör atıyoruz-->
-							<li><a href="" title="">Deneme Sekme 1</a></li><!--Sekmeleri oluşturduk-->
-							<li><a href="" title="">Deneme Sekme 2</a></li>
-						</ul>			
-					</li>
 				</ul>
 			</div>
 		</div>

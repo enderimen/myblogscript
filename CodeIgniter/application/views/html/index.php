@@ -35,7 +35,7 @@
 					<div class="panel panel-default">
 						<div class="panel-heading"><div class="panel-title">Staj Günlüğüm</div></div>
 						<ul class="list-group">
-						  <li class="list-group-item" style="font-family: Raleway">10.Gün<span class="badge">12</span></li>
+						  <li class="list-group-item" style="font-family: Raleway">1.Gün<span class="badge">12</span></li>
 						  <li class="list-group-item">2.Gün<span class="badge">100</span></li>
 						</ul>
 					</div>
