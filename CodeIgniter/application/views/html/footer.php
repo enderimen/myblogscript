@@ -8,7 +8,6 @@
                     <ul>
                         <li> <a href="#"> Anasayfa </a> </li>
                         <li> <a href="#"> Ben Kimim? </a> </li>
-                        <li> <a href="#"> Duyurular </a> </li>
                         <li> <a href="#"> İletişim </a> </li>
                     </ul>
                 </div>
@@ -41,7 +40,7 @@
     
     <div class="footer-bottom">
         <div class="container">
-            <p class="pull-left"> Copyright © Footer 2017. All right reserved. </p>
+            <p class="pull-left">Tüm hakları saklıdır.</p>
             <div class="pull-right">
                 <ul class="nav nav-pills payments">
                     <li><i class="fa fa-cc-visa"></i></li>
