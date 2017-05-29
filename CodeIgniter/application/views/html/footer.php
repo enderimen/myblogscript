@@ -1,55 +1,23 @@
-<!---->
-	<footer>
-    <div class="footer" id="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8  col-md-4 col-sm-6 col-xs-6">
-                    <h3> SİTE İÇERİĞİ </h3>
-                    <ul>
-                        <li> <a href="#"> Anasayfa </a> </li>
-                        <li> <a href="#"> Ben Kimim? </a> </li>
-                        <li> <a href="#"> İletişim </a> </li>
-                    </ul>
-                </div>
+<footer style="background-color: #37474F">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-2" style="margin-top:15px; ">
+					<ul>
+						<a href="index.php"><li class="list">Anasayfa</li></a>
+						<a href="hakkimda.php"><li class="list">Ben Kimim?</li></a>
+						<a href="iletisim.php" ><li class="list">İletişim</li></a>
+					</ul>
+				</div>
+				<div class="col-sm-4 pull-right">
+					<h4>Sosyal Ağ <span class="glyphicon glyphicon-hand-right"></span></h4>
+					<ul>
+						<a href="https://www.facebook.com/enderimen" target="_blank"><li class="list">Facebook</li></a>
+						<a href="https://www.twitter.com/imenender" target="_blank"><li class="list">Twitter</li></a>
+						<a href="https://www.linkedin.com/in/ender-imen-35a173a9/" target="_blank"><li class="list">Linkedin</li></a>
+						<a href="https://github.com/enderimen" target="_blank"><li class="list">Github</li></a>
+					</ul>	
+				</div>
 
-               
-                <div class="col-lg-4  col-md-3 col-sm-6 col-xs-12 ">
-                    <h3> HIZLI ERİŞİM </h3>
-                    <ul>
-                        <li>
-                            <div class="input-append newsletter-box text-center">
-                                <input type="text" class="full text-center" placeholder="Email">
-                                <button class="btn btn-info" type="button"> Haberdar Ol <i class="fa fa-long-arrow-right"> </i> </button>
-                            </div>
-                        </li>
-                    </ul>
-                    <ul class="social">
-                        <li> <a href="#"> <i class="fa fa-facebook-f"></i></a></li>
-                        <li> <a href="#"> <i class="fa fa-twitter"></i></a></li>
-                        <li> <a href="#"> <i class="fa fa-google-plus"></i></a></li>
-                        <li> <a href="#"> <i class="fa fa-pinterest"></i></a></li>
-                        <li> <a href="#"> <i class="fa fa-youtube"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <!--/.row--> 
-        </div>
-        <!--/.container--> 
-    </div>
-    <!--/.footer-->
-    
-    <div class="footer-bottom">
-        <div class="container">
-            <p class="pull-left">Tüm hakları saklıdır.</p>
-            <div class="pull-right">
-                <ul class="nav nav-pills payments">
-                    <li><i class="fa fa-cc-visa"></i></li>
-                    <li><i class="fa fa-cc-mastercard"></i></li>
-                    <li><i class="fa fa-cc-amex"></i></li>
-                    <li><i class="fa fa-cc-paypal"></i></li>
-                </ul> 
-            </div>
-        </div>
-    </div>
-    <!--/.footer-bottom--> 
+			</div>
+		</div>
 </footer>
