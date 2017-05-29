@@ -1,15 +1,26 @@
 <?php include "header.php";?>
 
 
-<div class="panel-heading text-center"><div class="panel-title"><h3>Mesaj Gönder</h3> </div></div>
-<div class="col-lg-6 col-md-4 col-sm-4 col-xs-12 text-center">
-	<div class="panel panel-default">
-		<form action="" method="">
-			<input type="text" class="form-control" placeholder="Adınız"><br>
-			<input type="text" class="form-control" placeholder="Mail Adresiniz"><br>
-			<input type="text" class="form-control" placeholder="Konu"><br>
-			<input type="textarea" class="form-control" placeholder="İletiniz"><br>
-			<input type="submit" class="form-control btn btn-info"><br>
-		</form>
+<div class="container">
+	
+	<div class="panel-heading text-center"><div class="panel-title"><h3 style="font-family: tahoma;">Mesaj Gönder</h3> </div></div>
+	<div class="left col-lg-3 col-md-3 col-sm-6 col-xs-12"></div>
+	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+		<div class="panel" style="margin-top:50px;">
+			<form action="" method="">
+				<h4>Adınız*</h4>
+				<input type="text" class="form-control input-lg"><br>
+				<h4>Mail Adresiniz*</h4>
+				<input type="text" class="form-control input-lg"><br>
+				<h4>Konu*</h4>
+				<input type="text" class="form-control input-lg"><br>
+				<h4>İletiniz*</h4>
+				<textarea class="form-control input-lg" placeholder="..."></textarea><br>
+
+				<input type="submit" class="btn btn-info col-lg-6 col-md-6 col-sm-4 col-xs-12 pull-right"><br>
+			</form>
+		</div>
 	</div>
 </div>
+
+<?php include "footer.php"; ?>
