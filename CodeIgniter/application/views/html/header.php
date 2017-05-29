@@ -49,9 +49,9 @@
 			<!--Arama Kutusu END-->
 			
 
-			<div class="collapse navbar-collapse navbarSec"><!--Sayfa küçültüldüğünde menü yü grup haline getiriyoruz-->
-				<ul class="nav navbar-nav navbar-right"><!--Menü başlıklarını oluşturduk-->
-					<li><a href="#" title="">Ben Kimim!</a></li>
+			<div class="collapse navbar-collapse navbarSec">	<!--Sayfa küçültüldüğünde menü yü grup haline getiriyoruz-->
+				<ul class="nav navbar-nav navbar-right">		<!--Menü başlıklarını oluşturduk-->
+					<li><a href="hakkimda.php" title="">Ben Kimim!</a></li>
 					<li><a href="iletisim.php" title="">İletişim</a></li>
 				</ul>
 			</div>
