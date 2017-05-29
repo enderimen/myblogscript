@@ -26,7 +26,7 @@
 	<div class="navbar navbar-inverse navbar-static-top myMenu"> <!--Menü barımız. NOT:Burada inverse yerine default da kulanabilirdik sadece fark inverse de border-radius var ve arkaplan siyah-->
 		<!--Menü sekmeleri-->
 		<div class="container"><!--Menü yü ve içerisinde bulunan elementleri ortalamaya yarıyor.-->
-			<a href="#" class="navbar-brand">Anasayfa</a><!--Anasayfa Yönlendirme-->
+			<a href="index.php" class="navbar-brand">Anasayfa</a><!--Anasayfa Yönlendirme-->
 			
 			<div class="navbar-header"><!--Kutucuğa tıklandığı zaman menü sekmeleri navbarda kalıyordu biz de navbar-header i kullanarak ikisini birbirinden ayırdık-->
 				<button class="navbar-toggle" data-toggle="collapse" data-target=".navbarSec"><!--Sayfa sıkıştırıldığında çıkan menü aç kutucuğunu oluşturduk-->
@@ -52,7 +52,7 @@
 			<div class="collapse navbar-collapse navbarSec"><!--Sayfa küçültüldüğünde menü yü grup haline getiriyoruz-->
 				<ul class="nav navbar-nav navbar-right"><!--Menü başlıklarını oluşturduk-->
 					<li><a href="#" title="">Ben Kimim!</a></li>
-					<li><a href="#" title="">İletişim</a></li>
+					<li><a href="iletisim.php" title="">İletişim</a></li>
 				</ul>
 			</div>
 		</div>
