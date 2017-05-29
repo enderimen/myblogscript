@@ -1,7 +1,8 @@
 body{
 	margin: 0px;
 	padding: 0px;
-	background-color: #FFF9C4;
+	background-color: white;
+	/*background-color: #FFF9C4;*/
 }
 .acilirmenu li>a{
 	color: white !important;
@@ -25,6 +26,11 @@ a:hover{
 	text-decoration: none;
 
 }
+.text-style{
+	height: 50px;font-size: 20px;
+}
+
+
 /*--------------------------------------------------------*/
 .full {
     width: 100%;    
