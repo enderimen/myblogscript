@@ -1,24 +1,25 @@
-<footer style="background-color: #37474F;margin-top: 20px;">
+<footer style="background-color: #333333;margin-top: 20px;">
 		<div class="container">
-			<div class="row">
-				<div class="col-sm-2 pull-left" style="margin-top:40px; ">
+			<div class="row">	
+				<!--Sosyal medya hesaplarım-->
+				<div class="content col-sm-12 col-xs-12 text-center" style="margin-top: 50px;">
 					<ul>
-						<a href="index.php"><li class="list"><span class="glyphicon glyphicon-home"> Anasayfa</li></a>
-						<a href="hakkimda.php"><li class="list"><span class="glyphicon glyphicon-user"> Ben Kimim?</li></a>
-						<a href="iletisim.php" ><li class="list"><span class="glyphicon glyphicon-envelope"> İletişim</li></a>
-					</ul>
-				</div>
-
-				<div class="content col-sm-2 pull-right">
-					<h4 style="color: orange">Sosyal Ağ <span class="glyphicon glyphicon-bookmark"></span></h4>
-					<ul>
-						<a href="https://www.facebook.com/enderimen" target="_blank"><li class="list">Facebook</li></a>
-						<a href="https://www.twitter.com/imenender" target="_blank"><li class="list">Twitter</li></a>
-						<a href="https://www.linkedin.com/in/ender-imen-35a173a9/" target="_blank"><li class="list">Linkedin</li></a>
-						<a href="https://github.com/enderimen" target="_blank"><li class="list">Github</li></a>
+						<a href="https://www.facebook.com/enderimen" target="_blank"><img src="../img/facebook.png" alt=""></a>
+						<a href="https://www.twitter.com/imenender" target="_blank"><img src="../img/twitter.png" alt=""></a>
+						<a href="https://www.linkedin.com/in/ender-imen-35a173a9/" target="_blank"><img src="../img/linkedin.png" alt=""></a>
+						<a href="https://github.com/enderimen" target="_blank"><img src="../img/google.png" alt=""></a>
+						<a href="https://github.com/enderimen" target="_blank"><img src="../img/github.png" alt=""></a>
 					</ul>	
 				</div>
 
+			</div>
+
+			<!--Telif hakkı yazısı-->
+			<div class="row text-center">
+				<ul>
+					<li class="list">Copyright | 2017-2018 Bootstrap</li>
+					<li class="list">Tüm hakları saklıdır.</li>
+				</ul>	
 			</div>
 		</div>
 </footer>
