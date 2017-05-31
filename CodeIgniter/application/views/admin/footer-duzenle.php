@@ -17,7 +17,7 @@
 								<form action="admin-islem.php" method="POST" enctype="multipart/form-data">
 									
 									<div class="row">
-										<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+										<div class="col-lg-10 col-md-8 col-sm-12 col-xs-12">
 											<!-- RECENT PURCHASES -->
 											<div class="panel">
 												
@@ -41,23 +41,26 @@
 																</td>
 																<td>
 																	<div class="col-md-8">
-																		<input type="file" class="form-control" name="id" value="">
+																		<input type="file" name="id" value="">
 																	</div>
 																</td>
 																<td><input type="submit" class="btn btn-primary" value="Güncelle"></td>
 															</tr>
 														</tbody>
 													</table>
-													<div class="form-group col-md-8">
+												</div>
+
+
+											</div>
+											<div class="form-group col-md-10">
 														<h4>Footer yazısı</h4>
-														<input type="text" class="form-control" name="id" value="">
+														<input type="text" style="height: 40px" class="form-control" name="id" value="">
 													</div>
 													<div class="form-group">
+													<br><br>
 														<input type="submit" value="Kaydet" class="btn btn-info" name="">
 														<br>									
 													</div>
-												</div>
-											</div>
 											<!-- END RECENT PURCHASES -->
 										</div>
 									</div>
