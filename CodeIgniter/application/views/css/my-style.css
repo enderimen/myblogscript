@@ -29,6 +29,4 @@ a:hover{
 .text-style{
 	height: 50px;font-size: 20px;
 }
-footer li{color: #52AEFF;list-style: none;font-family: tahoma,'Times New Roman', Serif;}
-footer li:hover{color: #4CE7FF;transition: 0.5s}
-footer h4{color: white;font-family: tahoma}
+footer li{color: gray;list-style: none;font-family: tahoma,'Times New Roman', Serif}
