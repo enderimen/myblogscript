@@ -14,7 +14,7 @@
 	<!-- GOOGLE FONTS -->
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
 	<!-- ICONS -->
-	<link rel="shortcut icon" href="..\img\instagram.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="..\img\.ico" type="image/x-icon" /><!--icon-->
 </head>
 
 <body>
@@ -24,8 +24,8 @@
 			<div class="vertical-align-middle">
 				<div class="auth-box">
 					<div class="left" style="box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-						<div class="content col-xs-12" style="margin-top:100px;">
-							<div class="logo text-center"><img src="../img/instagram_logo.png" alt="Instagram Logo"></div>
+						<div class="content col-xs-12" style="margin-top:50px;">
+							<div class="logo text-center"><img src="../img/logo.png" alt="Blog"></div>
 							
 							<form class="form-auth-small" action="giris.php" method="POST">
 								<div class="form-group">
