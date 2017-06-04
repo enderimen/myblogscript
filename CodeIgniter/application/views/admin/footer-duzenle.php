@@ -32,7 +32,7 @@
 											
 														<tbody>
 															<tr>
-																<td><img src="#" alt=""></td>
+																<td><img src="../img/facebook.png" alt=""></td>
 																<td>
 																	<div class="form-group col-md-8">
 																		<input name="resim" type="text">
