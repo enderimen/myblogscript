@@ -18,7 +18,7 @@
 			<div class="row text-center">
 				<ul>
 					<li class="list">Copyright | 2017-2018 Bootstrap</li>
-					<li class="list"></li>
+					<li class="list">Tüm hakları saklıdır.</li>
 				</ul>	
 			</div>
 		</div>
