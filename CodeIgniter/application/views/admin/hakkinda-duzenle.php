@@ -20,6 +20,9 @@
 										<div class="col-lg-12 col-md-8 col-sm-12 col-xs-12">
 											<!-- RECENT PURCHASES -->
 											<div class="panel">
+												<div class="form-group  col-lg-12 col-md-12 col-sm-12 col-xs-12">
+													<textarea name="hakkimda" cols="40" rows="10" placeholder="Biraz kendinden bahset..."></textarea>
+												</div>
 												<div class="form-group col-md-4">
 													<img src="" style="height: 200px;width: 200px;" alt="Profil Resmi" title=""><br><!--Resim boyutu düzenlenecek-->			
 												</div>
