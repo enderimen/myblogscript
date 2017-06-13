@@ -48,11 +48,11 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'localhost';
-$db['default']['username'] = '';
+$db['default']['hostname'] = 'localhost';//sunucu adı
+$db['default']['username'] = 'root';//username adı
 $db['default']['password'] = '';
-$db['default']['database'] = '';
-$db['default']['dbdriver'] = 'mysql';
+$db['default']['database'] = 'blog'; //veritabanı adı
+$db['default']['dbdriver'] = 'mysqli';//mysqli kullanılacak
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
 $db['default']['db_debug'] = TRUE;
