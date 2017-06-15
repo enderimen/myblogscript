@@ -1,4 +1,7 @@
-
+<?php 
+	$this->load->view('/include/header'); 
+	$this->load->view('/include/slider');
+ ?>
 
 	<!--Grid Sistemi Başlangıç-->	
 	<div class="container">
@@ -102,7 +105,8 @@
 		
 	</div>
 
-
+	<?php $this->load->view('/include/footer');?>
 
 </body>
 </html>	
+

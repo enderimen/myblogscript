@@ -1,5 +1,4 @@
-<?php $this->load->view('include/header.php');  ?>
-
+<?php $this->load->view('/include/header'); ?>
 <div class="container">
 
 	<div class="content" style="margin-top: 50px;">
@@ -8,7 +7,7 @@
 		<div class="panel panel-info">
 		<div class="row">
 			<div class="profil-image text-center">
-				<img src="../../../assets/frontend/img/profil-img.jpg" alt="" class="img-circle" style="width: 250px;height: 250px">
+				<img src="<?php echo base_url();?>assets/frontend/img/profil-img.jpg" alt="" class="img-circle" style="width: 250px;height: 250px">
 			</div>
 		</div>
 		<!--Profil bitti-->
@@ -28,6 +27,4 @@
 
 </div>
 
-<?php $this->load->view('include/footer.php');  ?>
-
-
+<?php $this->load->view('/include/footer'); ?>
