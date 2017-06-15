@@ -38,7 +38,7 @@
 |
 */
 
-$route['default_controller'] = "islem";
+$route['default_controller'] = 'anasayfa';
 $route['404_override'] = '';
 
 

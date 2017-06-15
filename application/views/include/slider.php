@@ -13,15 +13,15 @@
   	<!-- Wrapper for slides -->
   	<div class="carousel-inner">
 	    <div class="item active">
-	      <img src="../img/r1.jpg" alt="Los Angeles">
+	      <img src="<?php echo base_url();?>assets/frontend/img/r1.jpg" alt="Los Angeles">
 	    </div>
 
 	    <div class="item">
-	      <img src="../img/r2.jpg" alt="Chicago">
+	      <img src="<?php echo base_url();?>assets/frontend/img/r2.jpg" alt="Chicago">
 	    </div>
 
     	<div class="item">
-  		  <img src="../img/r3.jpg" alt="New York">
+  		  <img src="<?php echo base_url();?>assets/frontend/img/r3.jpg" alt="New York">
     	</div>
   	</div>
 

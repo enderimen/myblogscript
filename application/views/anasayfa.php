@@ -1,4 +1,4 @@
-<?php include 'header.php'; include 'slider.php'; ?>
+
 
 	<!--Grid Sistemi Başlangıç-->	
 	<div class="container">
@@ -102,7 +102,7 @@
 		
 	</div>
 
-<?php include 'footer.php'; ?>
+
 
 </body>
 </html>	

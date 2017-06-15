@@ -1,4 +1,4 @@
-<?php include "header.php";?>
+<?php $this->load->view('include/header.php');   ?>
 
 
 <div class="container">
@@ -24,4 +24,4 @@
 	</div>
 </div>
 
-<?php include "footer.php"; ?>
+<?php $this->load->view('include/footer.php'); ?>
