@@ -28,4 +28,12 @@ class Yonetimpaneli extends CI_Controller {
 			redirect('yonetim');
 		}
 	}
+	public function hakkinda()
+	{
+		$this->load->model('vt');
+		$hakkindacek=$this->vt->hakkindabilgi();
+		$data['hakkindacek']=$hakkindacek;
+
+		$this->load->view("yonetim/hakkinda-duzenle",$data);
+	}
 }
