@@ -4,14 +4,26 @@ class Anasayfa extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view("anasayfa");
+		$this->load->model('vt');
+		$sonuc=$this->vt->paylasimcek();
+		
+		$data=new stdclass;
+		$data->bilgi=$sonuc;
+
+		$this->load->view("anasayfa",$data);
 		//Git view de adresi verilen sayfayı görüntüle
 		/*Burası view yüklemek için kullanılan bölümdür.*/
 		/*Burada çağıracağımız sayfa ilk olarak başlatılan sayfa olacaktır.[views içerindeki dosyayının yolunu veriyoruz.]*/
 	}
 	public function hakkimda()
 	{
-		$this->load->view('/hakkimda');		
+		$this->load->model('vt');
+		$sonuc=$this->vt->hakkindabilgi();
+		
+		$data=new stdclass;
+		$data->bilgi=$sonuc;
+
+		$this->load->view('/hakkimda',$data);		
 	}
 	public function iletisim()
 	{
