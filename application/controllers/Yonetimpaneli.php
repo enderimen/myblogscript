@@ -84,4 +84,14 @@ class Yonetimpaneli extends CI_Controller {
 			redirect('yonetimpaneli');
 		}
 	}
+	
+	//Paylaşımları güncelle
+	public function paylasimguncelle($id)
+	{
+		$this->load->model('vt');
+		$inf=$this->vt->paylasimbilgi($id);
+		$data['inf']=$inf;
+
+		$this->load->view('yonetim/paylasimguncelle',$data);
+	}
 }
