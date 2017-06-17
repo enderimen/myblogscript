@@ -123,4 +123,27 @@ class Yonetimpaneli extends CI_Controller {
 			redirect('yonetimpaneli');
 		}
 	}
+
+	//Biyografi bilgilerini güncelleme
+	public function hakkindaduzenle()
+	{
+		$hakkinda = $this->input->post('hakkinda');
+
+		##Form dan gelen veirleri diziye aktarıyoruz.##
+
+		$data=array('hakkinda'=>$hakkinda);
+
+		$this->load->model('vt');
+		$sonuc=$this->vt->hakkindaguncelle($data);
+
+		if ($sonuc) {
+		
+			$this->session->set_flashdata('bilgi','<div class="alert alert-success alert-dismissible" role="alert">
+										<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+										<i class="fa fa-info-circle"></i>Biyografin Güncellendi. 
+									</div>');
+
+			redirect('yonetimpaneli');
+		}
+	}
 }
