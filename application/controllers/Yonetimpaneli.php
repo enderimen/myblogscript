@@ -67,4 +67,21 @@ class Yonetimpaneli extends CI_Controller {
 			redirect('yonetimpaneli');
 		}
 	}
+
+	//Yapmış olduğumuz paylaşımı silmek için
+	public function paylasimsil($id)
+	{
+		$this->load->model('vt');
+		$sil=$this->vt->paylasimsil($id);
+
+		if ($sil) {
+
+			$this->session->set_flashdata('bilgi','<div class="alert alert-success alert-dismissible" role="alert">
+										<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+										<i class="fa fa-info-circle"></i>Paylaşım Başarıyla Silindi. 
+									</div>');
+
+			redirect('yonetimpaneli');
+		}
+	}
 }
