@@ -28,6 +28,34 @@ class Yonetimpaneli extends CI_Controller {
 			redirect('yonetim');
 		}
 	}
+
+	/*public function panel()
+	{
+		$this->load->view("yonetim/anasayfa");
+	}*/
+	public function paylasim()
+	{
+		$this->load->view("yonetim/paylasim-yap");
+	}
+	public function footer()
+	{
+		$this->load->model('vt');
+		$footercek=$this->vt->footerbilgi();
+		$data['footercek']=$footercek;
+
+		$this->load->view("yonetim/footer-duzenle",$data);
+	}
+	
+	public function slider()
+	{
+		$this->load->view("yonetim/slider-duzenle");
+	}
+	
+	public function profilim()
+	{
+		$this->load->view("yonetim/profilim");
+	}
+
 	public function hakkinda()
 	{
 		$this->load->model('vt');
