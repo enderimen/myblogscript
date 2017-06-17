@@ -84,7 +84,7 @@ class Yonetimpaneli extends CI_Controller {
 			redirect('yonetimpaneli');
 		}
 	}
-	
+
 	//Paylaşımları güncelle
 	public function paylasimguncelle($id)
 	{
@@ -93,5 +93,34 @@ class Yonetimpaneli extends CI_Controller {
 		$data['inf']=$inf;
 
 		$this->load->view('yonetim/paylasimguncelle',$data);
+	}
+
+	//Paylaşım Güncelleme 
+	public function paylasimduzenle($id)
+	{
+		$paylasim_baslik = $this->input->post('paylasim_baslik');
+		$paylasim_gunu = $this->input->post('paylasim_gunu');
+		$paylasim_yazisi = $this->input->post('paylasim_yazisi');
+
+		##Form dan gelen veirleri diziye aktarıyoruz.##
+
+		$data=array('paylasim_baslik'=>$paylasim_baslik,
+					'paylasim_yazisi'=>$paylasim_yazisi,
+					'staj_gunu'=>$paylasim_gunu,
+					'paylasim_link'=>sef($paylasim_baslik)
+					);
+
+		$this->load->model('vt');
+		$sonuc=$this->vt->paylasimguncelle($data,$id);
+
+		if ($sonuc) {
+		
+			$this->session->set_flashdata('bilgi','<div class="alert alert-success alert-dismissible" role="alert">
+										<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+										<i class="fa fa-info-circle"></i>Paylaşım Başarıyla Güncellendi. 
+									</div>');
+
+			redirect('yonetimpaneli');
+		}
 	}
 }
