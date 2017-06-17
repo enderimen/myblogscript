@@ -36,4 +36,35 @@ class Yonetimpaneli extends CI_Controller {
 
 		$this->load->view("yonetim/hakkinda-duzenle",$data);
 	}
+
+	//Paylaşım Eklemek için 
+	public function paylasimekle()
+	{
+		$paylasim_baslik = $this->input->post('paylasim_baslik');
+		$paylasim_gunu = $this->input->post('paylasim_gunu');
+		$paylasim_yazisi = $this->input->post('paylasim_yazisi');
+		$paylasim_tarihi=date('Y-m-d');
+
+		##Form dan gelen veirleri diziye aktarıyoruz.##
+
+		$data=array('paylasim_baslik'=>$paylasim_baslik,
+					'paylasim_yazisi'=>$paylasim_yazisi,
+					'staj_gunu'=>$paylasim_gunu,
+					'paylasim_tarih'=>$paylasim_tarihi,
+					'paylasim_link'=>sef($paylasim_baslik),
+					'tik_sayisi'=>0);
+
+		$this->load->model('vt');//model dosyasını yükledik.
+		$ekle=$this->vt->paylasimekle($data);//Model dosyasında tanımladığımız ekleme fonk. ekleme paratmetresini gönderdik.
+		
+		if ($ekle) {
+			
+			$this->session->set_flashdata('bilgi','<div class="alert alert-success alert-dismissible" role="alert">
+										<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+										<i class="fa fa-info-circle"></i>Paylaşım Başarıyla Eklendi. 
+									</div>');
+
+			redirect('yonetimpaneli');
+		}
+	}
 }
