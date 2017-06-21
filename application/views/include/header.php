@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1"><!--Mobil için yeniden boyutlandırma-->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	
-	<title>Blog | Ender İMEN</title><!--Başlık-->
+	<title><?php echo $this->session->userdata('title'); ?></title><!--Başlık-->
 	
 	<!--<link rel="shortcut icon" href="/img/.ico" type="image/x-icon" />-->
 
@@ -27,7 +27,7 @@
 	<div class="navbar navbar-inverse navbar-static-top myMenu"> <!--Menü barımız. NOT:Burada inverse yerine default da kulanabilirdik sadece fark inverse de border-radius var ve arkaplan siyah-->
 		<!--Menü sekmeleri-->
 		<div class="container"><!--Menü yü ve içerisinde bulunan elementleri ortalamaya yarıyor.-->
-			<a href="" class="navbar-brand" style="color: white">Anasayfa</a><!--Anasayfa Yönlendirme-->
+			<a href="<?php echo base_url('anasayfa'); ?>" class="navbar-brand" style="color: white">Anasayfa</a><!--Anasayfa Yönlendirme-->
 			
 			<div class="navbar-header"><!--Kutucuğa tıklandığı zaman menü sekmeleri navbarda kalıyordu biz de navbar-header i kullanarak ikisini birbirinden ayırdık-->
 				<button class="navbar-toggle" data-toggle="collapse" data-target=".navbarSec"><!--Sayfa sıkıştırıldığında çıkan menü aç kutucuğunu oluşturduk-->
