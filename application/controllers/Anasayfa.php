@@ -38,4 +38,14 @@ class Anasayfa extends CI_Controller {
 	{
 		$this->load->view('/iletisim');
 	}
+	//Paylaşımı detaylı olarak görüntülüyoruz. 
+	public function paylasimlar($link)
+	{
+		$this->load->model('vt');//Model e bağlandık
+		$sonuc=$this->vt->paylasim($link);//Model in içerisindeki payalsim fonk. gelen paylaşım başlığını gönderdik. 
+
+		$this->session->set_userdata('title',$sonuc->paylasim_baslik);//session başlattık sekme başlığı için
+		$data['bilgi']=$sonuc;//Gelen bilgileri diziye atadık.
+		$this->load->view('paylasim-detay',$data);//diziyi de ilgili sayfaya yolladık.
+	}
 }
