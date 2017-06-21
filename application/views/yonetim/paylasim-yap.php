@@ -10,44 +10,35 @@
 
 			<div class="main-content">
 				<div class="container-fluid">
+							<!-- INPUTS -->
 							<div class="panel col-lg-12 col-md-12 col-sm-12 col-xs-12">
 								<div class="panel-heading">
-									<h3 class="panel-title">Gönderini Paylaş</h3>
+									<h2 class="panel-title">Gönderini Paylaş</h2>
+									
+									<!--##Paylaşim bilgisinin mesajı##-->
+
+									<?php echo $this->session->flashdata('bilgi'); ?>
+								
 								</div>
-								<form action="admin-islem.php" method="POST" enctype="multipart/form-data">
+								<form action="<?php echo base_url('yonetimpaneli/paylasimekle'); ?>" method="POST" enctype="multipart/form-data">
 								
 									<div class="form-group col-md-8">
 										<h4>Gönderi Başlığı</h4>
-										<input type="text" class="form-control" name="id" value="">
+										<input type="text" class="form-control" name="paylasim_baslik" value="" required>
 									</div>
 									<div class="form-group col-md-4">
 										<h4>Staj Günü</h4>
-										<input type="text" class="form-control" name="id" value="">
+										<input type="text" class="form-control" name="paylasim_gunu"  value="" required>
 									</div>
-									<div class="form-group col-md-10">
+									<div class="form-group col-md-12">
 										<h4>Gönderi İçeriği</h4>
-										<textarea type="text" class="form-control" placeholder="Yaz..." style="height: 300px;width: 980px" value=""></textarea> <!--BOYUT ESNEK OLACAK-->
+										<textarea type="text" name="paylasim_yazisi" class="ckeditor"  value=""></textarea> <!--BOYUT ESNEK OLACAK-->
 										<br>									
 									</div>
-									<div class="form-group col-md-8">
-										<img src="" style="height: 300px;width:500px;" alt="Resim" title="">
-										<br>									
+									<div class="form-group col-lg-4 col-md-12 col-sm-12 col-xs-12 pull-right">
+										
+										<input type="submit" value="Paylaş" class="btn btn-info col-lg-12 col-md-12 col-sm-12 col-xs-12" name="btn-paylasim-paylas">
 									</div>
-									<div class="form-group col-md-4">
-										<h4>Resim Yükle</h4>
-										<input name="resim" type="file"><!--resmin yolu güncellenirken çekilecek-->
-										<br>									
-									</div>
-									<div class="form-group col-lg-4 col-md-12 col-sm-12 col-xs-12">
-										<br><br><br><br><br><br>
-										<input type="submit" value="Kaydet" class="btn btn-info col-md-12 col-sm-12 col-xs-12" name="btn-kullanici-duzenle">
-										<br>									
-									</div>
-									<div class="form-group col-lg-4 col-md-12 col-sm-12 col-xs-12">
-										<input type="submit" value="Kullanıcıyı Sil" class="btn btn-danger col-md-12 col-sm-12 col-xs-12" name="btn-kullanici-sil">
-										<br>									
-									</div>
-
 								</form>
 							</div>
 							<!-- END INPUTS -->
