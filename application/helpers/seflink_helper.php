@@ -1,6 +1,5 @@
 <?php
-function sef($str, $options = array())
-{
+function sef($str, $options = array()){
     $str = mb_convert_encoding((string)$str, 'UTF-8', mb_list_encodings());
     $defaults = array(
         'delimiter' => '-',
@@ -78,4 +77,22 @@ function sef($str, $options = array())
     $str = trim($str, $options['delimiter']);
     return $options['lowercase'] ? mb_strtolower($str, 'UTF-8') : $str;
 }
+
+//Paylaşım yazısını kısaltalım
+
+function kisalt($metin){
+    
+    // substr ile belirlenen uzunlukta kesiyoruz
+        $metin = substr($metin, 0, 380)."...";
+    
+    // kesilen metindeki son kelimeyi buluyoruz
+    
+        $metin_son = strrchr($metin, " ");
+    
+    // son kelimeyi " ..." ile değiştiriyoruz
+        $metin = str_replace($metin_son," ...", $metin);
+        
+        return $metin;
+    }
+
 ?>
