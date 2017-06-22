@@ -10,13 +10,13 @@
 		<div class="panel" style="margin-top:50px;">
 			<form action="" method="">
 				<h4>Adınız*</h4>
-				<input type="text" class="form-control input-lg"><br>
+				<input type="text" class="form-control input-lg" name="ad"><br>
 				<h4>Mail Adresiniz*</h4>
-				<input type="text" class="form-control input-lg"><br>
+				<input type="email" class="form-control input-lg" name="mail"><br>
 				<h4>Konu*</h4>
-				<input type="text" class="form-control input-lg"><br>
+				<input type="text" class="form-control input-lg" name="konu"><br>
 				<h4>İletiniz*</h4>
-				<textarea class="form-control input-lg" placeholder="..."></textarea><br>
+				<textarea class="form-control input-lg" placeholder="..." name="mesaj"></textarea><br>
 
 				<input type="submit" class="btn btn-info col-lg-4 col-md-4 col-sm-2 col-xs-12 pull-right"><br>
 			</form>
