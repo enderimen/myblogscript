@@ -7,16 +7,19 @@
 	<div class="left col-lg-3 col-md-3 col-sm-6 col-xs-12"><!--Void div--></div>
 	
 	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+	
+		<!--Mesaj iletim bilgisi-->
+		<?php echo $this->session->flashdata('bilgi'); ?>
 		<div class="panel" style="margin-top:50px;">
-			<form action="" method="">
+			<form action="<?php echo base_url('anasayfa/mesaj');?>" method="POST">
 				<h4>Adınız*</h4>
-				<input type="text" class="form-control input-lg" name="ad"><br>
+				<input type="text" class="form-control input-lg" name="ad" required><br>
 				<h4>Mail Adresiniz*</h4>
-				<input type="email" class="form-control input-lg" name="mail"><br>
+				<input type="email" class="form-control input-lg" name="mail" required><br>
 				<h4>Konu*</h4>
-				<input type="text" class="form-control input-lg" name="konu"><br>
+				<input type="text" class="form-control input-lg" name="konu" required><br>
 				<h4>İletiniz*</h4>
-				<textarea class="form-control input-lg" placeholder="..." name="mesaj"></textarea><br>
+				<textarea class="form-control input-lg" placeholder="..." name="mesaj" required></textarea><br>
 
 				<input type="submit" class="btn btn-info col-lg-4 col-md-4 col-sm-2 col-xs-12 pull-right"><br>
 			</form>
