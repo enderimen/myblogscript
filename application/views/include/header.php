@@ -7,13 +7,14 @@
 	
 	<title><?php echo $this->session->userdata('title'); ?></title><!--Başlık-->
 	
-	<!--<link rel="shortcut icon" href="/img/.ico" type="image/x-icon" />-->
+	<link rel="shortcut icon" href="<?php echo base_url();?>assets/frontend/img/logo.ico" type="image/x-icon" />
 
 	<link rel="stylesheet" href="<?php echo base_url();?>assets/frontend/css/bootstrap.min.css">
 	<link rel="stylesheet" href="<?php echo base_url();?>assets/frontend/css/bootstrap-theme.css">
 	<link rel="stylesheet" href="<?php echo base_url();?>assets/frontend/css/my-style.css">
 	<script src="<?php echo base_url();?>assets/frontend/js/jquery-3.2.0.min.js"></script>
 	<script src="<?php echo base_url();?>assets/frontend/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>assets/frontend/js/scroll_up.js"></script> 
 	
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
