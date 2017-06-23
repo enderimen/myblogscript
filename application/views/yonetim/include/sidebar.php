@@ -26,7 +26,7 @@
 		<!-- SIDEBAR -->
 		<div class="sidebar">
 			<div class="brand">
-				<a href="<?php echo base_url('yonetimpaneli'); ?>"><img alt="BLOG" title="Anasayfaya Git" class="img-responsive logo"></a><b style="color:#00A0F0">Web Master</b>
+				<b style="color:#00A0F0">Web Master</b>
 				<h5 style="color:white"><?php echo $info->admin_adi_soyadi; //Admin adını ve soyadını yazdırıyoruz?> | 31.05.2017 <i class="fa fa-thumbs-o-up"></i></h5>
 			</div>
 			<div class="sidebar-scroll">
