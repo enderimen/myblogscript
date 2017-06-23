@@ -25,6 +25,7 @@
                                                 <th>Mesaj</th>
                                                 <th>E-Mail</th>
                                                 <th>Gönderim Tarihi</th>
+                                                <th>İşlem</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -36,6 +37,10 @@
                                                 <td><?php echo $bilgi->mesaj; ?></td>
                                                 <td><?php echo $bilgi->mail; ?></td>
                                                 <td><?php echo $bilgi->mesaj_tarih; ?></td>
+                                                <td>
+                                                    <a title="Sil" href="<?php echo base_url('yonetimpaneli/mesajsil'); echo '/'.$bilgi->mesajID ?>"><button class="btn btn-danger"><i class="fa fa-remove"></i>  </button>
+                                                    </a>
+                                                </td>
                                             </tr>
                                             <?php } ?>
                                         </tbody>
