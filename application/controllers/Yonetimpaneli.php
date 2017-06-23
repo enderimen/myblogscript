@@ -47,6 +47,23 @@ class Yonetimpaneli extends CI_Controller {
 
 		$this->load->view("yonetim/mesajlar",$data);
 	}
+
+	//Seçilen mesajı sil
+	public function mesajsil($id)
+	{
+		$this->load->model('vt');
+		$sil=$this->vt->mesajsil($id);
+
+		if ($sil) {
+
+			$this->session->set_flashdata('bilgi','<div class="alert alert-success alert-dismissible" role="alert">
+										<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+										<i class="fa fa-info-circle"></i>Mesaj Başarıyla Silindi. 
+									</div>');
+
+			redirect('yonetimpaneli/mesajlar');
+		}
+	}
 	public function footer()
 	{
 		$this->load->model('vt');

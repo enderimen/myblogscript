@@ -148,10 +148,17 @@
 		{
 			$result=$this->db->select('*')
 			->from('mesajlar')
-			->order_by('mesajID','DESC')
+			->order_by('mesaj_tarih','DESC')
 			->get()
 			->result();//Tüm tabloyu çekmek için
 			
+			return $result;
+		}
+
+		//Gelen mesajı siliyoruz.
+		public function mesajsil($id)
+		{
+			$result=$this->db->delete('mesajlar',array('mesajID'=>$id));// mesajlar tablosundan id si $id olan mesajı siliyoruz
 			return $result;
 		}
 	}
