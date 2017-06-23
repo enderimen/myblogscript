@@ -11,10 +11,12 @@
 	<link rel="stylesheet" href="<?php  echo base_url(); ?>assets/backend/assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="<?php  echo base_url(); ?>assets/backend/assets/css/vendor/icon-sets.css">
 	<link rel="stylesheet" href="<?php  echo base_url(); ?>assets/backend/assets/css/main.min.css">
+	<link rel="stylesheet" href="<?php  echo base_url(); ?>assets/backend/assets/css/mesajlar-table.css">
+	<link rel="stylesheet" href="<?php  echo base_url(); ?>assets/backend/assets/css/mesajlar-table1.css">
 	<!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
 	<link rel="stylesheet" href="<?php  echo base_url(); ?>assets/backend/assets/css/demo.css">
 	<!-- ICONS -->
-	<link rel="shortcut icon" href="..\img\.ico" type="image/x-icon" /><!--Logo çekilecek-->
+	<link rel="shortcut icon" href="<?php echo base_url();?>assets/frontend/img/logo.ico" type="image/x-icon" />
 	<script src="<?php echo base_url('assets/backend/ckeditor/ckeditor.js') ?>"></script><!--Editor düzenleyicisi-->
 </head>
 
@@ -30,11 +32,24 @@
 			<div class="sidebar-scroll">
 				<nav>
 					<ul class="nav">
-						<li><a href="<?php echo base_url('yonetimpaneli'); ?>" class="active"><i class="lnr lnr-bookmark"></i> <span>Tüm Gönderiler</span></a></li>
-						<li><a href="<?php echo base_url('yonetimpaneli/paylasim'); ?>"><i class="lnr lnr-pencil"></i><span>Gönderi Paylaş</span></a></li>
-						<li><a href="<?php echo base_url('yonetimpaneli/footer'); ?>"><i class="lnr lnr-magic-wand"></i><span>Footer Düzenle</span></a></li>
-						<li><a href="<?php echo base_url('yonetimpaneli/slider'); ?>"><i class="lnr lnr-magic-wand"></i><span>Slider Düzenle</span></a></li>
-						<li><a href="<?php echo base_url('yonetimpaneli/hakkinda');echo '/1' ?>"><i class="lnr lnr-magic-wand"></i><span>Hakkında Düzenle</span></a></li>
+						<li>
+							<a href="<?php echo base_url('yonetimpaneli'); ?>" class="active"><i class="lnr lnr-bookmark"></i> <span>Tüm Gönderiler</span></a>
+						</li>
+						<li>
+							<a href="<?php echo base_url('yonetimpaneli/mesajlar');echo '/1' ?>"><i class="lnr lnr-envelope"></i><span>Mesajlar</span></a>
+						</li>
+						<li>
+							<a href="<?php echo base_url('yonetimpaneli/paylasim'); ?>"><i class="lnr lnr-pencil"></i><span>Gönderi Paylaş</span></a>
+						</li>
+						<li>
+							<a href="<?php echo base_url('yonetimpaneli/footer'); ?>"><i class="lnr lnr-magic-wand"></i><span>Footer Düzenle</span></a>
+						</li>
+						<li>
+							<a href="<?php echo base_url('yonetimpaneli/slider'); ?>"><i class="lnr lnr-magic-wand"></i><span>Slider Düzenle</span></a>
+						</li>
+						<li>
+							<a href="<?php echo base_url('yonetimpaneli/hakkinda');echo '/1' ?>"><i class="lnr lnr-magic-wand"></i><span>Hakkında Düzenle</span></a>
+						</li>
 					</ul>
 				</nav>
 			</div>
