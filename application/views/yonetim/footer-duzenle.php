@@ -35,7 +35,7 @@
 																<td><img src="<?php  echo base_url(); ?>assets/backend/assets/img/facebook.png" alt=""></td>
 																<td>
 																	<div class="form-group col-md-8">
-																		<input name="resim" type="text">
+																		<input name="resim" type="text" value="<?php echo $footercek->footer_link; ?>">
 																		<br>									
 																	</div>
 																</td>
@@ -54,7 +54,7 @@
 											</div>
 											<div class="form-group col-md-10">
 														<h4>Footer yazısı</h4>
-														<input type="text" style="height: 40px" class="form-control" name="id" value="">
+														<input type="text" style="height: 40px" class="form-control" name="id" value="<?php echo $footercek->footer_text; ?>">
 													</div>
 													<div class="form-group">
 													<br><br>
