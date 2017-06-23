@@ -29,7 +29,7 @@
 			return $result;
 		}	
 		
-		##Paylaşım bilgilerini çekiyoruz##
+		//Paylaşım bilgilerini çekiyoruz
 		public function paylasimcek()
 		{
 			$result=$this->db->select('*')
@@ -41,6 +41,7 @@
 			return $result;
 		}
 
+		//İstenen Paylaşımın bilgilerini çekiyoruz.
 		public function paylasimbilgi($kadi)
 		{
 			$result=$this->db->select('*')
@@ -56,19 +57,21 @@
 			}
 		}
 
-		##Paylaşım Sil##
+		//Paylaştığımız gönderiyi siliyoruz.
 		public function paylasimsil($id)
 		{
 			$result=$this->db->delete('paylasimlar',array('paylasimID'=>$id));// paylasimlar tablosundan id si $id olan paylaşımı siliyoruz
 			return $result;
 		}
 
+		//Yaptığımız paylaşımı güncelliyoruz.
 		public function paylasimguncelle($data,$id)
 		{
 			$result=$this->db->update('paylasimlar',$data,array('paylasimID'=>$id));//Data dizisi güncellenece kiçeriği paylasimID ise pyalaşımın ID sini belirtiyor.
 			return $result;
 		}
 
+		//Hakkında bilgilerini çekiyoruz.
 		public function hakkindabilgi()
 		{
 			$result=$this->db->select('*')
@@ -83,6 +86,7 @@
 			}
 		}
 
+		//footer bilgilerini çekiyoruz.
 		public function footerbilgi()
 		{
 			$result=$this->db->select('*')
@@ -97,6 +101,7 @@
 			}
 		}
 
+		//Hakkında sayfası bilgilerini güncelle
 		public function hakkindaguncelle($data)
 		{
 			$result=$this->db->update('hakkinda',$data,array('hakkindaID'=>1));//Data dizisi güncellenece kiçeriği hakkindaID ise hakkında ID sini belirtiyor.
@@ -129,5 +134,24 @@
 
 			return $result;
 		}
-		
+
+		//İletişim mesajı ekleme kodu
+
+		public function mesajkaydet($data)
+		{
+			$sonuc=$this->db->insert('mesajlar',$data);//Verileri mesajlar tablosuna kaydediyoruz.
+			return $sonuc;
+		}
+
+		//Mesaj bilgilerini çekiyoruz
+		public function mesajcek()
+		{
+			$result=$this->db->select('*')
+			->from('mesajlar')
+			->order_by('mesajID','DESC')
+			->get()
+			->result();//Tüm tabloyu çekmek için
+			
+			return $result;
+		}
 	}

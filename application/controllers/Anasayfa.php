@@ -48,4 +48,36 @@ class Anasayfa extends CI_Controller {
 		$data['bilgi']=$sonuc;//Gelen bilgileri diziye atadık.
 		$this->load->view('paylasim-detay',$data);//diziyi de ilgili sayfaya yolladık.
 	}
+
+	//İletişim için mesaj gönder
+	public function mesaj()
+	{
+		//Form verilerini çekiyoruz.
+		$gonderen_ad=$this->input->post('ad');
+		$mail=$this->input->post('mail');
+		$konu=$this->input->post('konu');
+		$mesaj=$this->input->post('mesaj');
+		$mesaj_tarih=date('Y-m-d');
+		//Formdan verileri alıyoruz.
+		$data=array('gonderen_ad'=>$gonderen_ad,
+					'mail'=>$mail,
+					'konu'=>$konu,
+					'mesaj'=>$mesaj,
+					'mesaj_tarih'=>$mesaj_tarih);
+		
+		//Model dosyasını yüklüyoruz.
+		$this->load->model('vt');
+
+		//Verileri model deki mesaj ekleme fon. gönderiyoruz.
+		$sonuc=$this->vt->mesajkaydet($data);
+		
+		//Gelen sonucu kontrol ediyoruz.
+		if ($sonuc) { 	
+			//İletim mesajı gösteriyoruz.
+			$this->session->set_flashdata('bilgi','<div class="alert alert-info alert-dismissible" role="alert">
+										<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+										<i class="fa fa-info-circle"></i>Mesajınız İletildi.</div>');
+			redirect('anasayfa/iletisim');
+		}
+	}
 }
