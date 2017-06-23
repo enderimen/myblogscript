@@ -1,56 +1,82 @@
-<!doctype html>
-<html lang="en" class="fullscreen-bg">
-<head>
-	<title>Admin Panel | BLOG</title>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-	<!-- CSS -->
-	<link rel="stylesheet" href="<?php  echo base_url(); ?>/assets/backend/assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="<?php 	echo base_url(); ?>/assets/backend/assets/css/vendor/icon-sets.css">
-	<link rel="stylesheet" href="<?php  echo base_url(); ?>/assets/backend/assets/css/main.min.css">
-	<!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
-	<link rel="stylesheet" href="<?php  echo base_url(); ?>/assets/backend/assets/css/demo.css">
-	<!-- GOOGLE FONTS -->
-	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
-	<!-- ICONS -->
-	<link rel="shortcut icon" href="..\img\.ico" type="image/x-icon" /><!--icon-->
-</head>
+<?php $this->load->view('yonetim/include/sidebar.php'); ?>
+		<!-- MAIN -->
+		<div class="main">
 
-<body>
-	<!-- WRAPPER -->
-	<div id="wrapper">
-		<div class="vertical-align-wrap">
-			<div class="vertical-align-middle">
-				<div class="auth-box">
-					<div class="left" style="box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-						<div class="content col-xs-12" style="margin-top:50px;">
-							<div class="logo text-center"><img src="<?php  echo base_url(); ?>/assets/backend/assets/img/logo.png" alt="Blog"></div>
-							
-							<form class="form-auth-small" action="giris.php" method="POST">
-								<div class="form-group">
-									<input type="text" class="form-control" id="signup-email" name="kadi" placeholder="Kullanıcı Adı" value="Ender İMEN" required="required">
+			<!-- NAVBAR -->
+				<?php $this->load->view('yonetim/include/header.php'); ?>
+			<!-- END NAVBAR -->
+
+			<!-- MAIN CONTENT -->
+			<?php echo $this->session->flashdata('bilgi'); ?>
+
+			<div class="main-content">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+							<!-- RECENT PURCHASES -->
+							<div class="panel">
+								<div class="panel-body no-padding">
+									<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+										<thead>
+											<tr>
+												<th>Staj Günü</th>
+												<th>Gönderi Başlığı</th>
+												<th>Tarih</th>
+												<th class="text-center">Tıklanma Sayısı</th>
+												<th>İşlem</th>
+											</tr>
+										</thead>
+
+										<tbody>
+											<?php foreach ($bilgi as $bilgi) { ?>
+												<tr>
+													<td><?php echo $bilgi->staj_gunu; ?></td>
+													<td><?php echo $bilgi->paylasim_baslik; ?></td>
+													<td><?php echo $bilgi->paylasim_tarih; ?></td>
+													<td class="text-center"><?php echo $bilgi->tik_sayisi; ?></td>
+													<td>
+														<a href="<?php echo base_url('yonetimpaneli/paylasimsil'); echo '/'.$bilgi->paylasimID ?>"><button class="btn btn-danger"><i class="fa fa-remove"></i></button></a>
+														<a href="<?php echo base_url('yonetimpaneli/paylasimguncelle'); echo '/'.$bilgi->paylasimID.'' ?>"><button class="btn btn-warning"><i class="fa fa-pencil"></i></button></a>
+													</td>
+												</tr>
+											<?php } ?>
+										</tbody>
+									</table>
 								</div>
-								<div class="form-group">
-									<input type="password" class="form-control" id="signup-password" name="sifre" placeholder="Şifre" required="required">
+								<div class="panel-footer">
+									<div class="row">
+										<div class="col-md-6"><span class="panel-note"><i class="fa fa-clock-o"></i><?php echo date('F j ,Y / H:i:s');  ?></span></div>
+										<div class="col-md-6 text-right"></div>
+									</div>
 								</div>
-								<input type="submit" class="btn btn-info col-md-12" name="girisyap" value="Giriş Yap">
-							</form>
+							</div>
+							<!-- END RECENT PURCHASES -->
 						</div>
 					</div>
-					<div class="right content" style="box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-						<div class="overlay"></div>
-						<div class="content text">
-							<h1 class="heading">Blog | Yönetim Paneline Hoşgeldiniz</h1>
-							<p>Karadeniz Teknik Üniversitesi Yazılım Mühendisligi</p>
-						</div>
-					</div>
-					<div class="clearfix"></div>
 				</div>
 			</div>
+
+			<!-- END MAIN CONTENT -->
+			
 		</div>
+		
+		<!-- END MAIN -->
 	</div>
 	<!-- END WRAPPER -->
-</body>
 
+	<!-- Javascript -->
+	<script src="<?php  echo base_url(); ?>assets/backend/assets/js/jquery/jquery-2.1.0.min.js"></script>
+	<script src="<?php  echo base_url(); ?>assets/backend/assets/js/bootstrap/bootstrap.min.js"></script>
+	<script src="<?php  echo base_url(); ?>assets/backend/assets/js/plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="<?php  echo base_url(); ?>assets/backend/assets/js/plugins/jquery-easypiechart/jquery.easypiechart.min.js"></script>
+	<script src="<?php  echo base_url(); ?>assets/backend/assets/js/plugins/chartist/chartist.min.js"></script>
+	<script src="<?php  echo base_url(); ?>assets/backend/assets/js/klorofil.min.js"></script>
+	<script src="<?php  echo base_url(); ?>assets/backend/assets/js/mesajlar-js.js"></script>
+    <script src="<?php  echo base_url(); ?>assets/backend/assets/js/mesajlar-js1.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#example').DataTable();
+        } );
+    </script>
+</body>
 </html>
