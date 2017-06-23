@@ -37,6 +37,16 @@ class Yonetimpaneli extends CI_Controller {
 	{
 		$this->load->view("yonetim/paylasim-yap");
 	}
+	public function mesajlar()
+	{
+		$this->load->model('vt');
+		$cekilen=$this->vt->mesajcek(); //Model'den gelen sonucu içeriyor.
+
+		$data=new stdclass;
+		$data->bilgi=$cekilen;
+
+		$this->load->view("yonetim/mesajlar",$data);
+	}
 	public function footer()
 	{
 		$this->load->model('vt');
