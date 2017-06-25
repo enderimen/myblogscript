@@ -29,12 +29,25 @@
 			return $result;
 		}	
 		
-		//Paylaşım bilgilerini çekiyoruz
+		//Paylaşım bilgilerini çekiyoruz[yönetim panelindede çalışıyor onun için parametre almadık]
 		public function paylasimcek()
 		{
 			$result=$this->db->select('*')
 			->from('paylasimlar')
 			->order_by('paylasimID','DESC')
+			->get()
+			->result();//Tüm tabloyu çekmek için
+			
+			return $result;
+		}
+
+		//Sayfalama için paylaşım bilgilerini çekiyoruz
+		public function sayfalama($per,$segment)
+		{
+			$result=$this->db->select('*')
+			->from('paylasimlar')
+			->order_by('paylasimID','DESC')
+			->limit($per,$segment)
 			->get()
 			->result();//Tüm tabloyu çekmek için
 			
@@ -125,7 +138,7 @@
 			}
 		}
 
-
+		//Toplam yazı sayısı
 		public function paylasimsayisi()
 		{
 			$result=$this->db->select('paylasimID')
