@@ -40,6 +40,7 @@
 
 $route['default_controller'] = 'anasayfa';
 $route['paylasimlar/(:any)']='anasayfa/paylasimlar/$1';//Paylasimlar dan sonra gelen yazıyı parametre olarak gönderdik
+$route['anasayfa/(:any)']='anasayfa';
 $route['404_override'] = '';
 
 
