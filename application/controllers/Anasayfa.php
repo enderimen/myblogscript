@@ -4,16 +4,35 @@ class Anasayfa extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->model('vt');
-		$sonuc=$this->vt->paylasimcek();
-		
-		$sayi=$this->vt->paylasimsayisi();
-
-		$data=new stdclass;
-		$data->bilgi=$sonuc;
-
 		$this->session->set_userdata('title','Blog | Ender İMEN');//session başlattık sekme başlığı için
-		$this->load->view("anasayfa",$data);
+		$this->load->model('vt');
+		$sonuc=$this->vt->paylasimsayisi();		
+
+		$this->load->library('pagination');//pagination kütüphanesini dahil ediyoruz.
+		
+		$config=array(	//Özel ayar oluşturuyoruz.
+						"base_url"=>base_url()."/anasayfa",//Nerede çalışacak
+						"per_page"=>3,	//Her sayfada en fazla kaç tane yazı gösterilecek
+						"total_rows"=>$sonuc, //Toplamda kaç tane yazı var.
+						'full_tag_open' =>'<div class="pagination"><ul>',
+				        'full_tag_close' => '</ul></div>',
+				        'cur_tag_open' => '<li><a href="'.base_url("anasayfa/").'" style="color:#ffffff; background-color:#333333;">',
+				        'cur_tag_close' => '</a></li>',
+				        'num_tag_open' => '<li>',  'num_tag_close' => '</li>',
+				        'prev_tag_open'=> '<li>', 'prev_tag_close'=> '<li>',
+				        'next_tag_open'=> ' <li>',  'next_tag_close'=> '<li>',  
+				        'first_tag_open'=> ' <li>', 'first_tag_close'=> '<li>',
+				        'last_tag_open'=> ' <li>', 'last_tag_close'=> '<li>'
+       				 );
+
+		$this->pagination->initialize($config);//Ayarları başlattık.
+
+		$dataset['linkler']=$this->pagination->create_links();//Sayfa numaralarına link ekledik.
+		$dataset['bilgi']=$this->vt->sayfalama($config['per_page'],$this->uri->segment(2));//2.parametreyi alacak ve ona göre limit uygulayacağız.
+		$dataset['staj_gunleri']=$this->vt->paylasimcek();
+		$this->load->view("anasayfa",$dataset);
+
+
 		//Git view de adresi verilen sayfayı görüntüle
 		/*Burası view yüklemek için kullanılan bölümdür.*/
 		/*Burada çağıracağımız sayfa ilk olarak başlatılan sayfa olacaktır.[views içerindeki dosyayının yolunu veriyoruz.]*/
