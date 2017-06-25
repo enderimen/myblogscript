@@ -44,39 +44,13 @@
 
 				<nav aria-label="Page navigation">
 				  <ul class="pagination">
-				    <li>
-						<a href="#" aria-label="Previous">
-							<span aria-hidden="true">&laquo;</span>
-						</a>
-				    </li>
-					    <li><a href="#">1</a></li>
-					    <li><a href="#">2</a></li>
-					    <li><a href="#">3</a></li>
-					    <li><a href="#">4</a></li>
-					    <li><a href="#">5</a></li>
-					    <li>
-				     	<a href="#" aria-label="Next">
-				        <span aria-hidden="true">&raquo;</span>
-				      </a>
-				    </li>
+					    <ul class="pager">
+				    		<li><?php echo $linkler; ?>	</li>				    	
+					    </ul>
 				  </ul>
 				</nav>
 				
-				<!--Sayfalama Bitiş-->
-
-							
-				<!--<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right">
-					<div class="panel panel-default">
-						<div class="panel-heading"><div class="panel-title">En Popüler Olanlar</div></div>
-						<ul class="list-group">
-						  <li class="list-group-item">
-						    <span class="badge">14.Gün</span>
-						    Staj Günlüğüm
-						  </li>
-						</ul>
-					</div>
-				</div>--> 
-		
+				<!--Sayfalama Bitiş-->		
 	</div>
 
 	<?php $this->load->view('/include/footer');?>
