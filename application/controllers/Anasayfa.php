@@ -61,10 +61,22 @@ class Anasayfa extends CI_Controller {
 	public function paylasimlar($link)
 	{
 		$this->load->model('vt');//Model e bağlandık
-		$sonuc=$this->vt->paylasim($link);//Model in içerisindeki payalsim fonk. gelen paylaşım başlığını gönderdik. 
+				
+		$sonuc=$this->vt->paylasim($link);//Model in içerisindeki paylasim fonk. gelen paylaşım başlığını gönderdik. 
+		
+		//Okunma sayısını güncellemek için vt ye gönderiyoruz.
+		$say=$this->vt->okunmasayisicek($link);	//Veritabanından yazının okunma sayısını çekiyoruz.
+		$say->tik_sayisi+=1;//Okunma sayısını 1 arttırdık.
+		$okunmasayisi=array('tik_sayisi'=>$say->tik_sayisi);	//Diziye aktarıyoruz.
+		$kontrol=$this->vt->okunma_sayisi_guncelle($okunmasayisi,$link);	//Güncel okunma sayısını model e göneriyoruz.
 
+		
+		
 		$this->session->set_userdata('title',$sonuc->paylasim_baslik);//session başlattık sekme başlığı için
+
 		$data['bilgi']=$sonuc;//Gelen bilgileri diziye atadık.
+		$data['okunmasayisi']=$kontrol;//Gelen sonucu diziye aktardık.
+
 		$this->load->view('paylasim-detay',$data);//diziyi de ilgili sayfaya yolladık.
 	}
 
@@ -98,5 +110,11 @@ class Anasayfa extends CI_Controller {
 										<i class="fa fa-info-circle"></i>Mesajınız İletildi.</div>');
 			redirect('anasayfa/iletisim');
 		}
+	}
+
+	//Sayfa bulunamadı hatası
+	public function bulunamadi()
+	{
+		$this->load->view("404");
 	}
 }
