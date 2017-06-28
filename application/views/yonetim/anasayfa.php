@@ -35,8 +35,8 @@
 													<td><?php echo $bilgi->paylasim_tarih; ?></td>
 													<td class="text-center"><?php echo $bilgi->tik_sayisi; ?></td>
 													<td>
-														<a href="<?php echo base_url('yonetimpaneli/paylasimsil'); echo '/'.$bilgi->paylasimID ?>"><button class="btn btn-danger"><i class="fa fa-remove"></i></button></a>
-														<a href="<?php echo base_url('yonetimpaneli/paylasimguncelle'); echo '/'.$bilgi->paylasimID.'' ?>"><button class="btn btn-warning"><i class="fa fa-pencil"></i></button></a>
+														<a href="<?php echo base_url('yonetimpaneli/paylasimsil'); echo '/'.$bilgi->paylasimID ?>"><button class="btn btn-danger" title="Sil"><i class="fa fa-remove"></i></button></a>
+														<a href="<?php echo base_url('yonetimpaneli/paylasimguncelle'); echo '/'.$bilgi->paylasimID.'' ?>"><button class="btn btn-warning" title="Düzenle"><i class="fa fa-pencil"></i></button></a>
 													</td>
 												</tr>
 											<?php } ?>
