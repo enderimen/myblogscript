@@ -40,8 +40,8 @@
 
 $route['default_controller'] = 'anasayfa';
 $route['paylasimlar/(:any)']='anasayfa/paylasimlar/$1';//Paylasimlar dan sonra gelen yazıyı parametre olarak gönderdik
-$route['anasayfa/(:any)']='anasayfa';
-$route['404_override'] = '';
+$route['anasayfa/(:num)']='anasayfa';	//anasayfa 'dan sonra sayı girilirse paylaşımı detaylı bir şekilde gösterecek 
+$route['404_override'] = 'anasayfa/bulunamadi';
 
 
 /* End of file routes.php */
