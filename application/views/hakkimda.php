@@ -20,6 +20,7 @@
 			
 		<!--Hakkımda bitti-->	
 		</div>
+		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="margin-top: 20%"></div><!--Form ile footer arasında boşluk bırakmak için-->
 	</div>
 
 </div>
