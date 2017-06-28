@@ -16,7 +16,7 @@
 							<ul class="list-group">
 								<?php foreach ($staj_gunleri as $bilgiler) { ?>
 									<a href="<?php echo base_url('paylasimlar');echo '/'.$bilgiler->paylasim_link ?>">
-										<li class="list-group-item"><?php echo $bilgiler->staj_gunu.". Gün"; ?><span class="badge"><?php echo $bilgiler->tik_sayisi ?></span></li>
+										<li class="list-group-item" title="<?php echo $bilgiler->paylasim_baslik; ?>"><?php echo $bilgiler->staj_gunu.". Gün"; ?><span class="badge"><?php echo $bilgiler->tik_sayisi ?></span></li>
 									</a>
 								<?php } ?>
 							</ul>
