@@ -129,10 +129,9 @@
 			->WHERE('paylasim_link',$gelen_link)
 			->get()
 			->row();//İstenen satırı çekmek için
-
+			
 			if (count($result)!=1) {
-				return false;
-				redirect('anasayfa/yonetimpaneli');
+				redirect('bulunamadi');	//Eğer aranan yazı yoksa 404 sayfasına yönlendir.			
 			}else{
 				return $result;
 			}
@@ -173,5 +172,27 @@
 		{
 			$result=$this->db->delete('mesajlar',array('mesajID'=>$id));// mesajlar tablosundan id si $id olan mesajı siliyoruz
 			return $result;
+		}
+
+		//Okunma sayısını çek
+		public function okunmasayisicek($link)
+		{
+			$result=$this->db->select('tik_sayisi')
+			->from('paylasimlar')
+			->where('paylasim_link',$link)
+			->get()
+			->row();//Tüm satırı çekmek için
+
+			return $result;
+		}
+
+		//Okunma sayısını güncelle
+		public function okunma_sayisi_guncelle($okunmasayisi,$link)//okunmasayisi: Güncel okunma sayını aldık,link: paylaşım linki
+		{
+			$kontrol=$this->db->update('paylasimlar',$okunmasayisi,array('paylasim_link'=>$link));
+			
+			if ($kontrol) {		//kontrol ediyoruz.
+				return true;
+			}
 		}
 	}
