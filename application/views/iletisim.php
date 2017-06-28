@@ -24,6 +24,7 @@
 				<input type="submit" class="btn btn-info col-lg-4 col-md-4 col-sm-2 col-xs-12 pull-right"><br>
 			</form>
 		</div>
+		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="margin-top: 20%"></div><!--Form ile footer arasında boşluk bırakmak için-->
 	</div>
 </div>
 
