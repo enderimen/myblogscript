@@ -4,15 +4,16 @@ class Yonetim extends CI_Controller {
 
 	public function index()
 	{
+		//login ekranını açıyoruz.
 		$this->load->view("yonetim/login");
 	}
-
+		//Yönetim panelinden çıkış yapıyoruz.
 	public function cikis()
 	{
 		$this->session->sess_destroy();
 		redirect('yonetim');
 	}
-
+	//Yönetim paneline giriş yapıyruz.
 	public function login()
 	{
 		$this->load->library('form_validation');// form doğrulamayı yükledik

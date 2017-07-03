@@ -34,7 +34,7 @@
 		{
 			$result=$this->db->select('*')
 			->from('paylasimlar')
-			->order_by('paylasimID','DESC')
+			->order_by('paylasimID','Asc')
 			->get()
 			->result();//Tüm tabloyu çekmek için
 			
@@ -46,7 +46,7 @@
 		{
 			$result=$this->db->select('*')
 			->from('paylasimlar')
-			->order_by('paylasimID','DESC')
+			->order_by('paylasimID','Asc')
 			->limit($per,$segment)
 			->get()
 			->result();//Tüm tabloyu çekmek için

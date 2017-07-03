@@ -17,7 +17,7 @@
 								<div class="profile-header">
 									<div class="overlay"></div>
 									<div class="profile-main">
-										<img src="<?php  echo base_url(); ?>assets/backend/assets/img/profil-img.jpg" style="width: 120px;height: 120px;" class="img-circle" alt="Avatar">
+										<img src="<?php  echo base_url(); ?>assets/backend/assets/img/profil-img.jpg" style="width: 120px;height: 120px;" class="img-circle" alt="Profil Resmi">
 										<h3 class="name">Ender İMEN</h3>
 										<span class="online-status status-available">Öğrenci</span>
 									</div>
@@ -31,9 +31,25 @@
 											<li>Doğum Tarihi <span>21 Mayıs, 1995</span></li>
 											<li>Telefon <span>+90(539) 913-58-95</span></li>
 											<li>Email <span>enderimen@hotmail.com</span></li>
-											<li>Web Site <span><a href="http://localhost/Github_Repo/myblogscript/CodeIgniter/application/views/html/index.php" target="_blank">www.myblog.com</a></span></li>
-											<li>Phpmyadmin<span><a href="http://localhost/phpmyadmin/db_structure.php?server=1&db=instagram&token=2a7a96b411f3e8b0b97528307dbc766c" target="_blank">Phpmyadmin</a></span></li>
+											<li>Web Site <span><a href="<?php echo base_url(); ?>" target="_blank">www.myblog.com</a></span></li>
 											<li>Okul <span>KTU-Yazılım Mühendisliği | 2014</span></li>
+											
+											<li>Profil Resmini Değiştir
+												<span>
+													<form action="<?php echo base_url('yonetimpaneli/profilyükle');?>" method="POST" enctype="multipart/form-data">
+															<div class="row">
+															<div class="form-group col-md-8">
+																<input name="resim" type="file">		
+															</div>
+															<div class="form-group col-md-4 col-sm-12 col-xs-12">
+																<input type="submit" value="Kaydet" class="btn btn-warning" name="">
+																<br>									
+															</div>
+															</div>
+													</form>
+												</span>
+											</li>
+											
 										</ul>
 									</div>
 									<div class="profile-info">
@@ -46,7 +62,7 @@
 										</ul>
 									</div>
 									<div class="profile-info">
-										<h4 class="heading">Hakkımda</h4>
+										<h4 class="heading">Eğitim</h4>
 										<p>Yazılım Mühendisliği 2.Sınıf Öğrencisi</p>
 									</div>
 								</div>

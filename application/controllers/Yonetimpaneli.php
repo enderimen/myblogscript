@@ -29,10 +29,6 @@ class Yonetimpaneli extends CI_Controller {
 		}
 	}
 
-	/*public function panel()
-	{
-		$this->load->view("yonetim/anasayfa");
-	}*/
 	public function paylasim()
 	{
 		$this->load->view("yonetim/paylasim-yap");
@@ -119,7 +115,7 @@ class Yonetimpaneli extends CI_Controller {
 										<i class="fa fa-info-circle"></i>Paylaşım Başarıyla Eklendi. 
 									</div>');
 
-			redirect('yonetimpaneli');
+			redirect('yonetimpaneli/paylasim');
 		}
 	}
 
@@ -175,7 +171,7 @@ class Yonetimpaneli extends CI_Controller {
 										<i class="fa fa-info-circle"></i>Paylaşım Başarıyla Güncellendi. 
 									</div>');
 
-			redirect('yonetimpaneli');
+			redirect('yonetimpaneli/paylasim');
 		}
 	}
 
@@ -198,7 +194,32 @@ class Yonetimpaneli extends CI_Controller {
 										<i class="fa fa-info-circle"></i>Biyografin Güncellendi. 
 									</div>');
 
-			redirect('yonetimpaneli');
+			redirect('yonetimpaneli/hakkinda/1');
 		}
+	}
+
+	//Profil resim yükle
+
+	public function profilyükle()
+	{
+			$config['upload_path'] = base_url('assets/frontend/img/'); // dosyayı upload edeceğimiz klasör
+            $config['allowed_types'] = 'jpg|jpeg|png';       // izin verilen dosya uzantıları
+           
+
+            $this->load->library('upload', $config);        // CodeIgniter'ın upload sınıfını yükledik
+            
+            $sonuc = $this->upload->do_upload('profil-img');     // Dosyamızı upload ediyoruz.
+          
+            if($sonuc)
+            {
+
+             $file_data= $this->upload->data(); 
+             $data['bilgi']=base_url().'/asset/frontend/img'.$file_data['file_name'];
+             $this->load->view('profilim', $data);
+            }
+            else
+            {
+             $data['bilgi'] = 'Resim yüklenemedi. Hata Mesajı: '.$this->upload->display_errors();
+            }
 	}
 }
